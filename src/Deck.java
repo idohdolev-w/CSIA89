@@ -2,7 +2,7 @@ import java.util.*;
 import java.util.ArrayList;
 public class Deck {
 
-    public ArrayList<Card> cards = new ArrayList<Card>();
+    public ArrayList<Card> cards = new ArrayList<>();
 
     public Deck() {
         String[] a = {"Diamond","Club","Heart","Spade"};
@@ -21,7 +21,7 @@ public class Deck {
     }
 
     public Card draw() {
-        return cards.remove(0);
+        return cards.removeFirst();
     }
 
     public void shuffle() {

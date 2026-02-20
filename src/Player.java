@@ -25,7 +25,7 @@ public class Player {
         return d;
     }
 
-    public int checkMoney() { return money;}
+    public int checkMoney() { return money; }
 
     public void tellCards() {
         for (Card c: cards) {
