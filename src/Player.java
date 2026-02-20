@@ -12,6 +12,10 @@ public class Player {
         this.money = money;
     }
 
+    public ArrayList<Card> returnCards() {
+        return cards;
+    }
+
     public String returnName() { return name; }
 
     public Deck drawHand(Deck d) {
@@ -20,6 +24,8 @@ public class Player {
         }
         return d;
     }
+
+    public int checkMoney() { return money;}
 
     public void tellCards() {
         for (Card c: cards) {
