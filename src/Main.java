@@ -22,5 +22,5 @@ void main(String[] args) {
 
     System.out.println(luke.checkWin(river));
 
-    luke.bet();
+//    luke.bet();
 }

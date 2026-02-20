@@ -12,6 +12,11 @@ public class Player {
         this.money = money;
     }
 
+    public Player() {
+        this.name = "john pork";
+        this.money = 0;
+    }
+
     public ArrayList<Card> returnCards() {
         return cards;
     }
