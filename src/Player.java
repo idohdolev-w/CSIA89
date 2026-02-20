@@ -35,21 +35,21 @@ public class Player {
         int playerBet = -1;
         System.out.println("You have $" + money);
 
+        while (playerBet < 0) {
+            System.out.print("How much do you want to bet?  ");
 
-        System.out.print("How much do you want to bet?  ");
+            try {
+                playerBet = s.nextInt();
 
-        try {
-            playerBet = s.nextInt();
-
-            if (playerBet < 0) {
-                System.out.println("you can't bet negative money");
+                if (playerBet < 0) {
+                    System.out.println("you can't bet negative money");
+                } else if (playerBet == 0) {
+                    System.out.println("you have to bet money");
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("you have to bet a whole number.");
+                s.nextLine();
             }
-            if (playerBet == 0) {
-                System.out.println("you have to bet money");
-            }
-        } catch (InputMismatchException e) {
-            System.out.println("you have to bet a whole number.");
-            s.nextLine();
         }
 
 

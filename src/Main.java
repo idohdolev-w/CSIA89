@@ -23,11 +23,5 @@ public static void main(String[] args) {
 
     System.out.println(luke.checkWin(river));
 
-    boolean b = true;
-    while (b) {
-        int f = luke.bet();
-        if (f > 0) {
-            b = false;
-        }
-    }
+    luke.bet();
 }
