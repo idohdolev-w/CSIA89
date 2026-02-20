@@ -9,7 +9,7 @@ public static void main(String[] args) {
 
 
 
-    Player luke = new Player("Luke", -10);
+    Player luke = new Player("Luke", 10);
 
     System.out.println(luke.returnName());
     d = luke.drawHand(d);

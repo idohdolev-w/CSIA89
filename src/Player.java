@@ -46,6 +46,11 @@ public class Player {
                 } else if (playerBet == 0) {
                     System.out.println("you have to bet money");
                 }
+
+                if (playerBet > money) {
+                    System.out.println("you can't bet more then you have");
+                    playerBet = -1;
+                }
             } catch (InputMismatchException e) {
                 System.out.println("you have to bet a whole number.");
                 s.nextLine();
