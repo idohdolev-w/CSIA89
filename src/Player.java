@@ -35,7 +35,7 @@ public class Player {
         int playerBet = -1;
         System.out.println("You have $" + money);
 
-        while (playerBet < 0) {
+        while (playerBet <= 0) {
             System.out.print("How much do you want to bet?  ");
 
             try {
