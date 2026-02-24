@@ -23,7 +23,7 @@ public class Game {
             10,"Royal Flush"
 );
 
-    public Game(Player p) { //shuffle players later so random turn order trust
+    public Game(Player p) {
         players.add(p);
     }
 
@@ -31,6 +31,10 @@ public class Game {
         for (Card c: river) {
             System.out.println(c.toString());
         }
+    }
+
+    public void addBots() {
+        int g =1;
     }
 
     public void riverProgression() {
