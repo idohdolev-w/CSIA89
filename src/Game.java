@@ -64,7 +64,7 @@ public class Game {
 
     public void gameLoop() {
         d.shuffle();
-        String check="a";
+
     if (counter == 0) {
 
             for (Player p : players) {
