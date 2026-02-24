@@ -66,6 +66,8 @@ public class Game {
                 d = p.drawHand(d);
             }
 
+            System.out.println("How much do you want to bet");
+
         }
 
     }
