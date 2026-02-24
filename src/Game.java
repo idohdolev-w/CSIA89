@@ -1,4 +1,3 @@
-import java.util.HashMap;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.Scanner;
@@ -7,7 +6,7 @@ public class Game {
     Scanner s = new Scanner(System.in);
     int counter = 0;
     Deck d = new Deck();
-    int ante = 10;
+    int baseAnte = 10;
     ArrayList<Player> players = new ArrayList<Player>();
     ArrayList<Card> river = new ArrayList<Card>();
     public Map<Integer, String> dictionary = Map.of(
