@@ -27,6 +27,12 @@ public class Game {
         players.add(p);
     }
 
+    public void drawRiver() {
+        for (Card c: river) {
+            System.out.println(c.toString());
+        }
+    }
+
     public void riverProgression() {
         if (counter == 0) {
             Card burn = d.draw();
@@ -35,16 +41,21 @@ public class Game {
             }
 
             counter++;
+            drawRiver();
+
         }
         else if (counter == 1) {
             Card burn = d.draw();
             river.add(d.draw());
 
             counter++;
+            drawRiver();
         }
         else {
             Card burn = d.draw();
             river.add(d.draw());
+
+            drawRiver();
         }
 
     }
@@ -54,24 +65,30 @@ public class Game {
     public void gameLoop() {
         d.shuffle();
         String check="a";
-
-        if (players.get(1).checkMoney() >= ante) {
-            System.out.println("Would you like to play this round? the ante is " + ante + ". (Y/N)");
-            check = s.nextLine();
-        }
-
-        if (check.equals("Y") || check.equals("y")) {
+    if (counter == 0) {
 
             for (Player p : players) {
                 d = p.drawHand(d);
             }
 
-            System.out.println("How much do you want to bet");
+            players.get(0).tellCards();
+            int playerBet = players.get(0).bet();
 
-        }
+            riverProgression();
+
+
+    }
+    else if (counter == 1) {
+        int g =1;
+    }
+    else {
+        int g =1;
+    }
 
     }
 
-}
+    }
+
+
 
 // make game code, make bots, make it so that hands get added value for the cards in the win
