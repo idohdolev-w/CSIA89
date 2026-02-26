@@ -1,14 +1,16 @@
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.*;
 public class Game {
 
     Scanner s = new Scanner(System.in);
     int counter = 0;
     Deck d = new Deck();
     int baseAnte = 10;
-    ArrayList<Player> players = new ArrayList<Player>();
-    ArrayList<Card> river = new ArrayList<Card>();
+    ArrayList<Player> players = new ArrayList<>();
+    ArrayList<Integer> order = new ArrayList<>();
+    ArrayList<Card> river = new ArrayList<>();
     public Map<Integer, String> dictionary = Map.of(
             1,"High Card",
             2,"Pair",
@@ -67,26 +69,10 @@ public class Game {
 
     public void gameLoop() {
         d.shuffle();
-
-    if (counter == 0) {
-
-            for (Player p : players) {
-                d = p.drawHand(d);
-            }
-
-            players.get(0).tellCards();
-            int playerBet = players.get(0).bet();
-
-            riverProgression();
-
-
-    }
-    else if (counter == 1) {
-        int g =1;
-    }
-    else {
-        int g =1;
-    }
+        for (int i = 0; i < 4; i++) {
+            order.add(i);
+        }
+        Collections.shuffle(order);
 
     }
 
