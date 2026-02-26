@@ -6,6 +6,7 @@ public class Game {
 
     Scanner s = new Scanner(System.in);
     int counter = 0;
+    int roundNum = 1;
     Deck d = new Deck();
     int baseAnte = 10;
     ArrayList<Player> players = new ArrayList<>();
@@ -73,6 +74,8 @@ public class Game {
             order.add(i);
         }
         Collections.shuffle(order);
+
+
 
     }
 
