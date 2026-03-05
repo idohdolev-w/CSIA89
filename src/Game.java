@@ -70,10 +70,12 @@ public class Game {
 
     public void gameLoop() {
         d.shuffle();
-        for (int i = 0; i < 4; i++) {
-            order.add(i);
-        }
-        Collections.shuffle(order);
+//        for (int i = 0; i < 4; i++) {
+//            order.add(i);
+//        }
+//        Collections.shuffle(order);
+
+        // initial bet, three cards, bet, card, bet, card, final bet, check win
 
 
 
