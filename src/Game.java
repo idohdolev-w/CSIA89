@@ -24,6 +24,12 @@ public class Game {
             9,"Straight Flush",
             10,"Royal Flush"
 );
+    enum actions {
+        CHECK,
+        RAISE,
+        CALL,
+        FOLD
+    }
 
     public Game(Player p) {
         players.add(p);
